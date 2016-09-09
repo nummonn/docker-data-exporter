@@ -6,7 +6,7 @@ Dockerized relational data exporter from https://github.com/wongnai/relation-dat
 To start a container, just execute the following command. 
  
 	docker run --rm -v /tmp:/tmp \
-		wongnai/relation-data-exporter 
+		wongnai/data-exporter 
 
 The default command is to export using settings at /tmp/settings.yaml. You can mount it to different path on host.
 
@@ -14,7 +14,7 @@ The default command is to export using settings at /tmp/settings.yaml. You can m
 To override the default export command, just type the command after the image name.
 
 	docker run --rm -v /tmp:/tmp \
-    		wongnai/relation-data-exporter printConfig
+    		wongnai/data-exporter printConfig
     		
 ##Environment Variables
 The default configuration assumes that mysql db is at localhost. If you want to point to remote host, change the following variables:-
@@ -32,5 +32,5 @@ To run a container with environment variables, execute the command:-
 		-e spring_datasource_url="jdbc:mysql://myhost:3306/wongnai?useUnicode=true&characterEncoding=UTF-8" \
 		-e spring_datasource_username=u \
 		-e spring_datasource_password=p \
-		wongnai/relation-data-exporter 
+		wongnai/data-exporter 
 
